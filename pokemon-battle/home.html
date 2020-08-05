@@ -17,85 +17,37 @@
 
         <h2>Fight Arena</h2>
         <div class="fightscreen">
-            <div class="fightarena">
-                <div class="attacks2">
-                    <table>
-                        <tr>
-                            <td class="attack">Name: </td>
-                            <td class="attack"></td>
-                        </tr>
-                        <tr>
-                            <td class="attack">Level: </td>
-                            <td class="attack"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="attacks1">
-                    <table>
-                        <tr>
-                            <td colspan="3"><button id="startGame" style="background-color:red">Start Game!</button></td>
-                        </tr>
-                        <tr>
-                            <td><button id="attack1" class="attack" style="background-color: blue"></button></td>
-                            <td><button id="attack2" class="attack" style="background-color:green"></button></td>
-                            <td><button id="attack3" class="attack" style="background-color:yellow"></button></td>
-                        </tr>
-                    </table>
-                </div> <br>
-                <div class="pokemon2">
-                    <img id="pokemon2">
-                    <div><br>
-                        <table border ="1" width=100% height=100% class="battleStats">
-                            <tr>
-                                <td>Name: </td>
-                                <td id="name2"></td>
-                            </tr>
-                            <tr>
-                                <td>Health: </td>
-                                <td id="health2"></td>
-                            </tr>
-                            <tr>
-                                <td>Type: </td>
-                                <td id="type2"></td>
-                            </tr>
-                            <tr>
-                                <td>Status: </td>
-                                <td id="status2"></td>
-                            </tr>
-                            <tr>
-                                <td>Item: </td>
-                                <td id="item2"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="pokemon1">
-                    <img id="pokemon1">
-                    <div><br>
-                        <table border ="1" width=100% height=100% class="battleStats">
-                            <tr>
-                                <td>Name: </td>
-                                <td id="name1"></td>
-                            </tr>
-                            <tr>
-                                <td>Health: </td>
-                                <td id="health1"></td>
-                            </tr>
-                            <tr>
-                                <td>Type: </td>
-                                <td id="type1"></td>
-                            </tr>
-                            <tr>
-                                <td>Status: </td>
-                                <td id="status1"></td>
-                            </tr>
-                            <tr>
-                                <td>Item: </td>
-                                <td id="item1"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+            <div class="enemyPokemonFormat">
+                <img id="pokemon2">
+            </div>
+            <div id="enemyContainer" hidden>
+                <table id="ContainerStats">
+                    <tr>
+                        <td style="font-weight: bold;" id="enemyName" rowspan="2">Name</td>
+                        <td id="enemytype">Type</td>
+                        <td id="enemyspeed">Speed</td>
+                        <td id="enemystatus">Status</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="enemyhealth">Health</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="userContainer" hidden>
+                <table id="ContainerStats">
+                    <tr>
+                        <td style="font-weight: bold;" id="username" rowspan="2">Name</td>
+                        <td colspan="3" id="userhealth">Health</td>
+                    </tr>
+                    <tr>
+                        <td id="userAttack1">Attack1</td>
+                        <td id="userAttack2">Attack2</td>
+                        <td id="userAttack3">Attack3</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="allyPokemonFormat">
+                <img id="pokemon1">
             </div>
         </div>
 
@@ -191,3 +143,58 @@
     <script src="app.js"></script>
     </body>
 </html>
+
+
+    <!--<div class="fightscreen">
+            <div class="fightarena">
+                <div class="pokemon2">
+                    <img id="pokemon2">
+                    <div><br>
+                        <table width=100% height=100% class="battleStats">
+                            <tr>
+                                <td id="name2">Hey</td>
+                                <td id="health2">Hi</td>
+                                <td id="type2">Fdafd</td>
+                                <td id="status2">FDa</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="pokemon1">
+                    <div><br>
+                        <table border ="1" width=100% height=100% class="battleStats">
+                            <tr>
+                                <td>Name: </td>
+                                <td id="name1"></td>
+                            </tr>
+                            <tr>
+                                <td>Health: </td>
+                                <td id="health1"></td>
+                            </tr>
+                            <tr>
+                                <td>Type: </td>
+                                <td id="type1"></td>
+                            </tr>
+                            <tr>
+                                <td>Status: </td>
+                                <td id="status1"></td>
+                            </tr>
+                            <tr>
+                                <td>Item: </td>
+                                <td id="item1"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img id="pokemon1">
+                </div>
+                <div class="attacks1">
+                    <table>
+                        <tr>
+                            <td><button id="attack1" class="attack" style="background-color: grey"></button></td>
+                            <td><button id="attack2" class="attack" style="background-color:grey"></button></td>
+                            <td><button id="attack3" class="attack" style="background-color:grey"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>-->

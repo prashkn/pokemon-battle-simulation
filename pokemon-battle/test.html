@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pokemon fighting simulator</title>
+        <link rel="stylesheet" type="text/css" href="test.css">
+        <link rel="icon" type="image/png" href="pics/pokemonicon.png">
+    </head>
+    <body>
+        <h1>Pokemon Fight Simulator</h1>
+        
+        <div class="topnav">
+            <a class="active" href="home.html">Home</a>
+            <a href="pokemon.html">Pokemon</a>
+            <a href="patchNotes.html">Patch Notes</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <h2>Fight Arena</h2>
+        <div class="fightscreen">
+            <div class="enemyPokemonFormat">
+                <img id="pokemon2">
+            </div>
+            <div id="enemyContainer">
+                <table id="ContainerStats">
+                    <tr>
+                        <td style="font-weight: bold;" id="enemyName" rowspan="2">Name</td>
+                        <td id="enemytype">Type</td>
+                        <td id="enemyspeed">Speed</td>
+                        <td id="enemystatus">Status</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="enemyhealth">Health</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="userContainer">
+                <table id="ContainerStats">
+                    <tr>
+                        <td style="font-weight: bold;" id="username" rowspan="2">Name</td>
+                        <td colspan="3" id="userhealth">Health</td>
+                    </tr>
+                    <tr>
+                        <td id="userAttack1">Type</td>
+                        <td id="userAttack2">Speed</td>
+                        <td id="userAttack3">Status</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--<div class="pokemon2">
+                    <img id="pokemon2">
+                    <div><br>
+                        <table width=100% height=100% class="battleStats">
+                            <tr>
+                                <td id="name2">Hey</td>
+                                <td id="health2">Hi</td>
+                                <td id="type2">Fdafd</td>
+                                <td id="status2">FDa</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="pokemon1">
+                    <div><br>
+                        <table border ="1" width=100% height=100% class="battleStats">
+                            <tr>
+                                <td>Name: </td>
+                                <td id="name1"></td>
+                            </tr>
+                            <tr>
+                                <td>Health: </td>
+                                <td id="health1"></td>
+                            </tr>
+                            <tr>
+                                <td>Type: </td>
+                                <td id="type1"></td>
+                            </tr>
+                            <tr>
+                                <td>Status: </td>
+                                <td id="status1"></td>
+                            </tr>
+                            <tr>
+                                <td>Item: </td>
+                                <td id="item1"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img id="pokemon1">
+                </div>
+                <div class="attacks1">
+                    <table>
+                        <tr>
+                            <td><button id="attack1" class="attack" style="background-color: grey"></button></td>
+                            <td><button id="attack2" class="attack" style="background-color:grey"></button></td>
+                            <td><button id="attack3" class="attack" style="background-color:grey"></button></td>
+                        </tr>
+                    </table>
+                </div>-->
+        <div class="infocard-list">
+            <h2>Pick your pokemon!</h2>
+            <a class="infocard" id="bulbasaur" onclick="pickBulbasaur()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/bulbasaur.png" alt="Bulbasaur icon">
+                <br>
+                Bulbasaur
+            </a>
+            <a class="infocard" id="charmander" onclick="pickCharmander()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/charmander.png" alt="Charmander icon">
+                <br>
+                Charmander
+            </a>
+            <a class="infocard" id="squirtle" onclick="pickSquirtle()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/sword-shield/normal/squirtle.png" alt="Squirtle icon">
+                <br>
+                Squirtle
+            </a>
+            <a class="infocard" id="buttefree" onclick="pickButterfree()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/butterfree.png" alt="Butterfree icon">
+                <br>
+                Butterfree
+            </a>
+            <a class="infocard" id="beedrill" onclick="pickBeedrill()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/beedrill.png" alt="Beedrill icon">
+                <br>
+                Beedrill
+            </a>
+            <a class="infocard" id="pidgeotto" onclick="pickPidgeotto()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/pidgeotto.png" alt="Pidgeotto icon">
+                <br>
+                Pidgeotto
+            </a>
+            <a class="infocard" id="pikachu" onclick="pickPikachu()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/sword-shield/normal/pikachu.png" alt="Pikachu icon">
+                <br>
+                Pikachu
+            </a>
+            <a class="infocard" id="abra" onclick="pickAbra()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/abra.png" alt="Abra icon">
+                <br>
+                Abra
+            </a>
+            <a class="infocard" id="mew" onclick="pickMew()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/mew.png" alt="Mew icon">
+                <br>
+                Mew
+            </a>
+            <a class="infocard" id="ponyta" onclick="pickPonyta()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/ponyta.png" alt="Ponyta icon">
+                <br>
+                Ponyta
+            </a>
+            <a class="infocard" id="mimikyu" onclick="pickMimikyu()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/sword-shield/normal/mimikyu.png" alt="Mimikyu icon">
+                <br>
+                Mimikyu
+            </a>
+            <a class="infocard" id="litwick" onclick="pickLitwick()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/sword-shield/normal/litwick.png" alt="Litwick icon">
+                <br>
+                Litwick
+            </a>
+            <a class="infocard" id="pancham" onclick="pickPancham()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/sword-shield/normal/pancham.png" alt="Pancham icon">
+                <br>
+                Pancham
+            </a>
+            <a class="infocard" id="seadra" onclick="pickSeadra()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/seadra.png" alt="Seadra icon">
+                <br>
+                Seadra
+            </a>
+            <a class="infocard" id="cubone" onclick="pickCubone()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/cubone.png" alt="Cubone icon">
+                <br>
+                Cubone
+            </a>
+            <a class="infocard" id="ditto" onclick="pickDitto()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/ditto.png" alt="Ditto icon">
+                <br>
+                Ditto
+            </a>
+            <a class="infocard" id="vaporeon" onclick="pickVaporeon()">
+                <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/vaporeon.png" alt="Vaporeon icon">
+                <br>
+                Vaporeon
+            </a>
+        </div>
+
+    <script src="app.js"></script>
+    </body>
+</html>
