@@ -16,6 +16,9 @@ let cubone = document.getElementById('cubone');
 let ditto = document.getElementById('ditto');
 let vaporeon = document.getElementById('vaporeon');*/
 
+
+/* TO DO LIST:
+    - WORK ON POKEMON PAGE TO DISPLAY STATS. CALL THE PICKPOKEMON FUNCTION INSTEAD OF THE STATS FUNCTION AND THEN LIST OUT CURRENT POKEMON STATS.*/
 let firstType = document.getElementById("type1");
 let firstName = document.getElementById("name1");
 let firstStatus = document.getElementById("status1");
@@ -25,9 +28,7 @@ let secondName = document.getElementById("name2");
 let secondStatus = document.getElementById("status2");
 let secondHealth = document.getElementById("health2");
 
-let currentPokemon = {
-    
-}
+let currentPokemon = {}
 
 const ebulbasaur = {
     type: 'grass',
@@ -323,4 +324,9 @@ function setStats(){
     firstStatus.innerHTML = currentPokemon.status.toUpperCase();
     document.getElementById('pokemon1').src= currentPokemon.src;
     alert('You picked ' + currentPokemon.name + '!');
+}
+
+function myFunction(){
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
 }
