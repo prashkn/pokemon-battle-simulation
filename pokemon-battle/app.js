@@ -1,4 +1,4 @@
-let bulbasaur = document.getElementById('bulbasaur');
+/*let bulbasaur = document.getElementById('bulbasaur');
 let charmander = document.getElementById('charmander');
 let squirtle = document.getElementById('squirtle');
 let butterfree = document.getElementById('butterfree');
@@ -14,7 +14,7 @@ let pancham = document.getElementById('pancham');
 let seadra = document.getElementById('seadra');
 let cubone = document.getElementById('cubone');
 let ditto = document.getElementById('ditto');
-let vaporeon = document.getElementById('vaporeon');
+let vaporeon = document.getElementById('vaporeon');*/
 
 let firstType = document.getElementById("type1");
 let firstName = document.getElementById("name1");
@@ -221,182 +221,97 @@ let pokemonArray = [ebulbasaur, echarmander, esquirtle, ebutterfree, ebeedrill, 
 
 
 function pickBulbasaur(){
-    currentPokemon.name = ebulbasaur.name;
-    currentPokemon.health = ebulbasaur.health;
-    currentPokemon.type = ebulbasaur.type;
-    document.getElementById('pokemon1').src= ebulbasaur.src;
-    currentPokemon.status = "normal";
+    currentPokemon = ebulbasaur;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickCharmander(){
-    currentPokemon.name = echarmander.name;
-    currentPokemon.health = echarmander.health;
-    currentPokemon.type = echarmander.type;
-    document.getElementById('pokemon1').src= echarmander.src;
-    currentPokemon.status = "normal";
+    currentPokemon = echarmander;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickSquirtle(){
-    currentPokemon.name = esquirtle.name;
-    currentPokemon.health = esquirtle.health;
-    currentPokemon.type = esquirtle.type;
-    document.getElementById('pokemon1').src= esquirtle.src;
-    currentPokemon.status = "normal";
+    currentPokemon = esquirtle;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickButterfree(){
-    currentPokemon.name = ebutterfree.name;
-    currentPokemon.health = ebutterfree.health;
-    currentPokemon.type = ebutterfree.type;
-    document.getElementById('pokemon1').src= ebutterfree.src;
-    currentPokemon.status = "normal";
+    currentPokemon = ebutterfree;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickBeedrill(){
-    currentPokemon.name = ebeedrill.name;
-    currentPokemon.health = ebeedrill.health;
-    currentPokemon.type = ebeedrill.type;
-    document.getElementById('pokemon1').src= ebeedrill.src;
-    currentPokemon.status = "normal";
+    currentPokemon = ebeedrill;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickPidgeotto(){
-    currentPokemon.name = epidgeotto.name;
-    currentPokemon.health = epidgeotto.health;
-    currentPokemon.type = epidgeotto.type;
-    document.getElementById('pokemon1').src= epidgeotto.src;
-    currentPokemon.status = "normal";
+    currentPokemon = epidgeotto;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickPikachu(){
-    currentPokemon.name = epikachu.name;
-    currentPokemon.health = epikachu.health;
-    currentPokemon.type = epikachu.type;
-    document.getElementById('pokemon1').src= epikachu.src;
-    currentPokemon.status = "normal";
+    currentPokemon = epikachu;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickAbra(){
-    currentPokemon.name = eabra.name;
-    currentPokemon.health = eabra.health;
-    currentPokemon.type = eabra.type;
-    document.getElementById('pokemon1').src= eabra.src;
-    currentPokemon.status = "normal";
+    currentPokemon = eabra;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickMew(){
-    currentPokemon.name = emew.name;
-    currentPokemon.health = emew.health;
-    currentPokemon.type = emew.type;
-    document.getElementById('pokemon1').src= emew.src;
-    currentPokemon.status = "normal";
+    currentPokemon = emew;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickPonyta(){
-    currentPokemon.name = eponyta.name;
-    currentPokemon.health = eponyta.health;
-    currentPokemon.type = eponyta.type;
-    document.getElementById('pokemon1').src= eponyta.src;
-    currentPokemon.status = "normal";
+    currentPokemon = eponyta;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickMimikyu(){
-    currentPokemon.name = emimikyu.name;
-    currentPokemon.health = emimikyu.health;
-    currentPokemon.type = emimikyu.type;
-    document.getElementById('pokemon1').src= emimikyu.src;
-    currentPokemon.status = "normal";
+    currentPokemon = emimikyu;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickLitwick(){
-    currentPokemon.name = elitwick.name;
-    currentPokemon.health = elitwick.health;
-    currentPokemon.type = elitwick.type;
-    document.getElementById('pokemon1').src= elitwick.src;
-    currentPokemon.status = "normal";
+    currentPokemon = elitwick;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickPancham(){
-    currentPokemon.name = epancham.name;
-    currentPokemon.health = epancham.health;
-    currentPokemon.type = epancham.type;
-    document.getElementById('pokemon1').src= epancham.src;
-    currentPokemon.status = "normal";
+    currentPokemon = epancham;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickSeadra(){
-    currentPokemon.name = eseadra.name;
-    currentPokemon.health = eseadra.health;
-    currentPokemon.type = eseadra.type;
-    document.getElementById('pokemon1').src= eseadra.src;
-    currentPokemon.status = "normal";
+    currentPokemon = eseadra;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickCubone(){
-    currentPokemon.name = ecubone.name;
-    currentPokemon.health = ecubone.health;
-    currentPokemon.type = ecubone.type;
-    document.getElementById('pokemon1').src= ecubone.src;
-    currentPokemon.status = "normal";
+    currentPokemon = ecubone;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickDitto(){
-    currentPokemon.name = editto.name;
-    currentPokemon.health = editto.health;
-    currentPokemon.type = editto.type;
-    document.getElementById('pokemon1').src= editto.src;
-    currentPokemon.status = "normal";
+    currentPokemon = editto;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 function pickVaporeon(){
-    currentPokemon.name = evaporeon.name;
-    currentPokemon.health = evaporeon.health;
-    currentPokemon.type = evaporeon.type;
-    document.getElementById('pokemon1').src= evaporeon.src;
-    currentPokemon.status = "normal";
+    currentPokemon = evaporeon;
     setStats();
     assignEnemyPokemon();
-    document.getElementsByClassName("battleStats").style.visibility = "visible";
 }
 
-function assignEnemyPokemon(){
+function assignEnemyPokemon(){  
     var randomPokemon = pokemonArray[Math.floor(Math.random()*pokemonArray.length)];
     secondName.innerHTML = randomPokemon.name;
     secondHealth.innerHTML = randomPokemon.health;
-    secondType.innerHTML = randomPokemon.type.toUpperCase;
-    secondStatus.innerHTML = randomPokemon.status.toUpperCase;
+    secondType.innerHTML = randomPokemon.type.toUpperCase();
+    secondStatus.innerHTML = randomPokemon.status.toUpperCase();
     document.getElementById('pokemon2').src = randomPokemon.src;
     alert('Your opponent picked ' + randomPokemon.name + '!');
 }
@@ -406,5 +321,6 @@ function setStats(){
     firstHealth.innerHTML = currentPokemon.health;
     firstType.innerHTML = currentPokemon.type.toUpperCase();
     firstStatus.innerHTML = currentPokemon.status.toUpperCase();
+    document.getElementById('pokemon1').src= currentPokemon.src;
     alert('You picked ' + currentPokemon.name + '!');
 }
