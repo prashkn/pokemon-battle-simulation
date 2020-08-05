@@ -18,7 +18,8 @@ let vaporeon = document.getElementById('vaporeon');*/
 
 
 /* TO DO LIST:
-    - WORK ON POKEMON PAGE TO DISPLAY STATS. CALL THE PICKPOKEMON FUNCTION INSTEAD OF THE STATS FUNCTION AND THEN LIST OUT CURRENT POKEMON STATS.*/
+    - work on the pokemon page and getting the popups to work. might just go with alerts for now*/
+    
 let firstType = document.getElementById("type1");
 let firstName = document.getElementById("name1");
 let firstStatus = document.getElementById("status1");
@@ -329,4 +330,9 @@ function setStats(){
 function myFunction(){
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
+}
+function Stats(){
+    for (let x = 0; x < pokemonArray.length; x++){
+        if (pokemonArray[x])
+    }
 }
