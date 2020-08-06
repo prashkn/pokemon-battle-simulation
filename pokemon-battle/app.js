@@ -18,8 +18,8 @@ let vaporeon = document.getElementById('vaporeon');*/
 
 
 /* TO DO LIST:
-    - work on the pokemon page and getting the popups to work. might just go with alerts for now*/
-    
+    - MAKE A FUNCTION THAT SETS THE ONCLICK ELEMENT TO THE CURRENT POKEMON AND CALLS ANOTHER FUNCTION THAT ALERTS THE POKEMON STATS*/
+
 let username = document.getElementById("username");
 let userAttack1 = document.getElementById("userAttack1");
 let userAttack2 = document.getElementById("userAttack2");
@@ -296,6 +296,7 @@ function pickBulbasaur(){
     currentPokemon = ebulbasaur;
     setStats();
     assignEnemyPokemon();
+    readStats();
 }
 function pickCharmander(){
     currentPokemon = echarmander;
@@ -401,12 +402,16 @@ function setStats(){
     alert('You picked ' + currentPokemon.name + '!');
 }
 
-function myFunction(){
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
-/*function Stats(){
-    for (let x = 0; x < pokemonArray.length; x++){
-        if (pokemonArray[x])
+function setStats(pokemonName){
+    for (let o = 0; o < pokemonArray.length; o++){
+        if (pokemonName == pokemonArray[o].name){
+            currentPokemon = pokemonArray[o];
+        }
     }
-}*/
+    readStats();
+}
+
+function readStats(){
+    alert('Name: ' + currentPokemon.name + '\nType: ' + currentPokemon.type + '\n' + currentPokemon.attack1name + ': ' + currentPokemon.attack1 + '\n' + currentPokemon.attack2name + ': ' + currentPokemon.attack2 + '\n' + currentPokemon.attack3name + ': ' + currentPokemon.attack3 + '\nHealth: ' + currentPokemon.health + '\nSpeed: ' + currentPokemon.speed);
+}
+
