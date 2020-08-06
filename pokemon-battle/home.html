@@ -29,7 +29,7 @@
                         <td id="enemystatus">Status</td>
                     </tr>
                     <tr>
-                        <td colspan="3" id="enemyhealth">Health</td>
+                        <td colspan="3" id="enemyhealth" style="font-weight: bold;">Health</td>
                     </tr>
                 </table>
             </div>
@@ -37,7 +37,7 @@
                 <table id="ContainerStats">
                     <tr>
                         <td style="font-weight: bold;" id="username" rowspan="2">Name</td>
-                        <td colspan="3" id="userhealth">Health</td>
+                        <td colspan="3" id="userhealth" style="font-weight: bold;">Health</td>
                     </tr>
                     <tr>
                         <td id="userAttack1" class="attacks">Attack1</td>
@@ -50,9 +50,13 @@
                 <img id="pokemon1">
             </div>
         </div>
-
+        <div>
+            <div class="messageBox">
+                <h3 id="message"></h3>
+            </div>
+        </div>
+        <h2>Pick your pokemon!</h2>
         <div class="infocard-list">
-            <h2>Pick your pokemon!</h2>
             <a class="infocard" id="bulbasaur" onclick="pickBulbasaur()">
                 <img class="img-fixed icon-pkmn" src="https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/bulbasaur.png" alt="Bulbasaur icon">
                 <br>
@@ -143,58 +147,3 @@
     <script src="app.js"></script>
     </body>
 </html>
-
-
-    <!--<div class="fightscreen">
-            <div class="fightarena">
-                <div class="pokemon2">
-                    <img id="pokemon2">
-                    <div><br>
-                        <table width=100% height=100% class="battleStats">
-                            <tr>
-                                <td id="name2">Hey</td>
-                                <td id="health2">Hi</td>
-                                <td id="type2">Fdafd</td>
-                                <td id="status2">FDa</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="pokemon1">
-                    <div><br>
-                        <table border ="1" width=100% height=100% class="battleStats">
-                            <tr>
-                                <td>Name: </td>
-                                <td id="name1"></td>
-                            </tr>
-                            <tr>
-                                <td>Health: </td>
-                                <td id="health1"></td>
-                            </tr>
-                            <tr>
-                                <td>Type: </td>
-                                <td id="type1"></td>
-                            </tr>
-                            <tr>
-                                <td>Status: </td>
-                                <td id="status1"></td>
-                            </tr>
-                            <tr>
-                                <td>Item: </td>
-                                <td id="item1"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <img id="pokemon1">
-                </div>
-                <div class="attacks1">
-                    <table>
-                        <tr>
-                            <td><button id="attack1" class="attack" style="background-color: grey"></button></td>
-                            <td><button id="attack2" class="attack" style="background-color:grey"></button></td>
-                            <td><button id="attack3" class="attack" style="background-color:grey"></button></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>-->
