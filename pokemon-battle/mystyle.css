@@ -82,6 +82,7 @@ h5 {
     text-align: center;
     margin-left: 15%;
     margin-right: 15%;
+    border-radius: 16px;
 }
 
 .enemyPokemonFormat {
@@ -188,14 +189,17 @@ iframe {
 #ContainerStats #userAttack1:hover {
     background-color: #ddd;
     color: black;
+    cursor: pointer;
 }
 #ContainerStats #userAttack2:hover {
     background-color: #ddd;
     color: black;
+    cursor: pointer;
 }
 #ContainerStats #userAttack3:hover {
     background-color: #ddd;
     color: black;
+    cursor: pointer;
 }
 
 #ContainerStats #userAttack1 {

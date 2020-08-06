@@ -18,7 +18,7 @@ let vaporeon = document.getElementById('vaporeon');*/
 
 
 /* TO DO LIST:
-    - MAKE A FUNCTION THAT SETS THE ONCLICK ELEMENT TO THE CURRENT POKEMON AND CALLS ANOTHER FUNCTION THAT ALERTS THE POKEMON STATS*/
+    -*/
 
 let username = document.getElementById("username");
 let userAttack1 = document.getElementById("userAttack1");
@@ -30,6 +30,12 @@ let enemytype = document.getElementById("enemytype");
 let enemyspeed = document.getElementById("enemyspeed");
 let enemystatus = document.getElementById("enemystatus");
 let enemyhealth = document.getElementById("enemyhealth");
+let attack1 = document.getElementById("Userattack1");
+let attack2 = document.getElementById("Userattack2");
+let attack3 = document.getElementById("Userattack3");
+let currentEnemyHP;
+let currentAllyHP;
+let randomNumber;
 
 let currentPokemon = {
 }
@@ -414,3 +420,56 @@ function readStats(){
     alert('Name: ' + currentPokemon.name + '\nType: ' + currentPokemon.type + '\n' + currentPokemon.attack1name + ': ' + currentPokemon.attack1 + '\n' + currentPokemon.attack2name + ': ' + currentPokemon.attack2 + '\n' + currentPokemon.attack3name + ': ' + currentPokemon.attack3 + '\nHealth: ' + currentPokemon.health + '\nSpeed: ' + currentPokemon.speed);
 }
 
+attack1.onclick = () => {
+    if (currentPokemon.speed > randomPokemon.speed || currentPokemon.speed == randomPokemon.speed) {
+        alert(currentPokemon.name + ' used ' + currentPokemon.attack1name + '! It did ' + currentPokemon.attack1 + ' damage!'); //msg
+        randomPokemon.health = randomPokemon.health - currentPokemon.attack1; //update health
+        enemyhealth.innerHTML = 'Health: ' + randomPokemon.health; //update ui
+        ifDead();
+        randomMove();
+        ifDead();
+    } else {
+        randomMove();
+        ifDead();
+        alert(currentPokemon.name + ' used ' + currentPokemon.attack1name + '! It did ' + currentPokemon.attack1 + ' damage!'); //msg
+        randomPokemon.health = randomPokemon.health - currentPokemon.attack1; //update health
+        enemyhealth.innerHTML = 'Health: ' + randomPokemon.health; //update ui
+        ifDead();
+    }
+}
+
+
+function randomMove() {
+    randomNumber = Math.floor(Math.random()*3);
+    switch (randomNumber) {
+        case 1:
+            currentPokemon.health = currentPokemon.health - randomPokemon.attack1;
+            alert(randomPokemon.name + ' used ' + currentPokemon.attack1name + '! It did ' + randomPokemon.attack1 + ' damage!');
+            userhealth.innerHTML = 'Health: ' + currentPokemon.health; break;
+        case 2:
+            currentPokemon.health = currentPokemon.health - randomPokemon.attack2;
+            alert(randomPokemon.name + ' used ' + currentPokemon.attack2name + '! It did ' + randomPokemon.attack2 + ' damage!');
+            userhealth.innerHTML = 'Health: ' + currentPokemon.health; break;
+        case 3:
+            currentPokemon.health = currentPokemon.health - randomPokemon.attack3;
+            alert(randomPokemon.name + ' used ' + currentPokemon.attack3name + '! It did ' + randomPokemon.attack3 + ' damage!');
+            userhealth.innerHTML = 'Health: ' + currentPokemon.health; break;
+        default:
+            alert('huh????');
+    }
+}
+
+function ifDead(){
+    if (currentPokemon.health <= 0) {
+        alert(currentPokemon.name + ' has fainted! You lost!');
+        restart();
+    } else if (randomPokemon.health <= 0) {
+        alert(randomPokemon.name + ' has fainted! You won!!!');
+        restart();
+    }
+}
+
+function restart(){
+    location.reload();
+    return false;
+}
