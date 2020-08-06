@@ -31,7 +31,8 @@ let enemyspeed = document.getElementById("enemyspeed");
 let enemystatus = document.getElementById("enemystatus");
 let enemyhealth = document.getElementById("enemyhealth");
 
-let currentPokemon = {}
+let currentPokemon = {
+}
 
 const ebulbasaur = {
     type: 'grass',
@@ -135,7 +136,7 @@ const epikachu = {
     health: 90,
     speed: 5,
     status: 'normal',
-    frontsrc: "https://img.pokemondb.net/sprites/x-y/normal/pikachu-f.png",
+    frontsrc: "https://img.pokemondb.net/sprites/x-y/normal/pikachu-m.png",
     backsrc: "https://img.pokemondb.net/sprites/diamond-pearl/back-normal/pikachu.png"
 }
 const eabra = {
@@ -291,12 +292,10 @@ const evaporeon = {
 
 let pokemonArray = [ebulbasaur, echarmander, esquirtle, ebutterfree, ebeedrill, epidgeotto, epikachu, eabra, emew, eponyta, emimikyu, elitwick, epancham, eseadra, ecubone, editto, evaporeon];
 
-
 function pickBulbasaur(){
     currentPokemon = ebulbasaur;
     setStats();
     assignEnemyPokemon();
-    readStats();
 }
 function pickCharmander(){
     currentPokemon = echarmander;
@@ -402,7 +401,7 @@ function setStats(){
     alert('You picked ' + currentPokemon.name + '!');
 }
 
-function setStats(pokemonName){
+function setStat(pokemonName){
     for (let o = 0; o < pokemonArray.length; o++){
         if (pokemonName == pokemonArray[o].name){
             currentPokemon = pokemonArray[o];
